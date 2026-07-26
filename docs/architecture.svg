@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">BracketWM conceptual research flow</title>
+  <desc id="description">Visual context informs a local dynamics representation. Three controlled supervision conditions are compared in a held-out evaluation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#55616e"/>
+    </marker>
+    <style>
+      .heading { font: 700 28px sans-serif; fill: #17212b; }
+      .label { font: 700 18px sans-serif; fill: #17212b; }
+      .small { font: 15px sans-serif; fill: #52606d; }
+      .box { stroke-width: 2; rx: 18; }
+      .arrow { stroke: #55616e; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="480" rx="28" fill="#f4f1e9"/>
+  <text x="54" y="62" class="heading">Conceptual comparison</text>
+  <text x="54" y="93" class="small">A bounded view of the research question—not an implementation diagram.</text>
+
+  <rect x="54" y="160" width="220" height="150" class="box" fill="#dcecef" stroke="#157f86"/>
+  <text x="82" y="208" class="label">Visual context</text>
+  <text x="82" y="240" class="small">local scene cues</text>
+  <text x="82" y="266" class="small">and action setting</text>
+
+  <line x1="274" y1="235" x2="350" y2="235" class="arrow"/>
+
+  <rect x="365" y="160" width="250" height="150" class="box" fill="#e8e3f4" stroke="#6c5ce7"/>
+  <text x="393" y="208" class="label">Local dynamics</text>
+  <text x="393" y="240" class="small">context-dependent</text>
+  <text x="393" y="266" class="small">action representation</text>
+
+  <line x1="615" y1="235" x2="690" y2="235" class="arrow"/>
+
+  <rect x="705" y="122" width="235" height="226" class="box" fill="#fff" stroke="#a8a092"/>
+  <text x="733" y="164" class="label">Controlled conditions</text>
+  <circle cx="746" cy="205" r="6" fill="#52606d"/>
+  <text x="764" y="211" class="small">primitive supervision</text>
+  <circle cx="746" cy="248" r="6" fill="#52606d"/>
+  <text x="764" y="254" class="small">ordered-pair supervision</text>
+  <circle cx="746" cy="291" r="6" fill="#157f86"/>
+  <text x="764" y="297" class="small">direct bracket supervision</text>
+
+  <line x1="940" y1="235" x2="1010" y2="235" class="arrow"/>
+
+  <rect x="1025" y="160" width="125" height="150" class="box" fill="#f7e5df" stroke="#b3543d"/>
+  <text x="1045" y="211" class="label">Held-out</text>
+  <text x="1045" y="238" class="label">evaluation</text>
+  <text x="1045" y="276" class="small">same protocol</text>
+
+  <rect x="54" y="390" width="1096" height="48" rx="14" fill="#fff" opacity="0.86"/>
+  <text x="82" y="421" class="small">Question: when does local non-commutative supervision support stable composition?</text>
+</svg>

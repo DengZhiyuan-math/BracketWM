@@ -1,0 +1,4 @@
+/toy-output.svg
+__pycache__/
+*.pyc
+.DS_Store

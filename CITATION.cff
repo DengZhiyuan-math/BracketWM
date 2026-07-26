@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite this repository as a research proposal showcase."
+title: "BracketWM: Research Proposal Showcase"
+type: software
+authors:
+  - family-names: "Deng"
+    given-names: "Zhiyuan"
+date-released: 2026-07-26
+repository-code: "https://github.com/DengZhiyuan-math/BracketWM"
+url: "https://github.com/DengZhiyuan-math/BracketWM"
+abstract: >-
+  A limited public showcase for a controlled research prototype studying
+  direct Lie-bracket supervision for context-dependent action composition.
