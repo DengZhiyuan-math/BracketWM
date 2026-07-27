@@ -13,6 +13,78 @@
 
 ![BracketWM result overview](assets/hero.gif)
 
+## How to read the Hero GIF
+
+The animation is designed to show two different geometric scales. The upper
+half of each column shows the **absolute trajectories** for Ground truth,
+Primitive-only, Ordered-pair, and BracketWM. All four columns use the same
+isotropic scale. These trajectories are expected to look broadly similar:
+the total motion is on the order of $10^{-2}$, while the order-dependent
+effect of interest is only on the order of $10^{-4}$.
+
+The lower half therefore shows a **centered swapped-order endpoint residual**.
+For each condition, the final endpoints of the two action orders are
+
+$$
+p_{12}
+\quad\text{and}\quad
+p_{21}.
+$$
+
+The detail view subtracts their midpoint,
+
+$$
+m=\frac{p_{12}+p_{21}}{2},
+$$
+
+and displays $p_{12}-m$ and $p_{21}-m$. This removes the large common
+translation and isolates the separation vector
+
+$$
+\Delta_{\mathrm{order}}=p_{12}-p_{21}.
+$$
+
+Every lower panel uses the **same centered, isotropic residual scale**—no
+method is enlarged independently. For this selected sample the detail view is
+approximately 102 times more magnified than the absolute overview; the
+separate `0.005` and `5e-05` scale bars make that change explicit.
+
+The endpoint symbols have fixed meanings:
+
+- a filled circle is the endpoint for action order $1\rightarrow2$;
+- a hollow diamond is the endpoint for action order $2\rightarrow1$;
+- the dashed gray segment in the three learned-model columns is the centered
+  Ground-truth separation used only as a visual reference.
+
+The animation should therefore be read as follows:
+
+1. **Ground truth:** the two action orders produce a small but genuine endpoint
+   separation. This is the target local non-commutative response.
+2. **Primitive-only:** the two endpoints collapse onto one another. The model
+   captures the broad displacement but not the order effect.
+3. **Ordered-pair:** the separation remains close to collapsed. Additional
+   endpoint supervision alone does not recover the target geometry.
+4. **BracketWM:** the colored residual is visibly closer in direction and
+   magnitude to the dashed Ground-truth reference.
+
+The final frame reports the corresponding swapped-order errors:
+
+$$
+M_{\mathrm{primitive}}=1.000000,\qquad
+M_{\mathrm{paired}}=1.015860,\qquad
+M_{\mathrm{BracketWM}}=0.437972.
+$$
+
+Lower is better. BracketWM shows descriptive reductions of approximately
+56.2% relative to Primitive-only and 56.9% relative to Ordered-pair
+supervision.
+
+The GIF also deliberately ends with the conclusion **mixed**. Better local
+swapped-order recovery did not improve the held-out three-action composition,
+and the primitive-rollout fidelity guardrail was not preserved. The animation
+therefore visualizes evidence for a learnable local geometric signal—not a
+claim that the full compositional-generalization problem has been solved.
+
 ## Research question
 
 Action effects can depend on both visual context and order: doing action A
